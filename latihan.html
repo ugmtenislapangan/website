@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cara Bergabung — UKM Tenis Lapangan UGM 2026</title>
+    <meta name="description"
+        content="Informasi latihan dan cara bergabung UKM Tenis Lapangan UGM. Jadwal, iuran, dan form pendaftaran anggota maupun non-anggota." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* Additional styles for latihan page */
+        .faq-section {
+            padding: var(--section-py) 0;
+            background: var(--navy);
+        }
+
+        .faq-list {
+            margin-top: 48px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .faq-question {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-style: italic;
+            font-size: 1.15rem;
+            text-transform: uppercase;
+            color: var(--white);
+            padding: 24px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            letter-spacing: 0.02em;
+            transition: color var(--ease);
+        }
+
+        .faq-question:hover {
+            color: var(--camel-light);
+        }
+
+        .faq-question .icon {
+            font-size: 1.2rem;
+            color: var(--olive-light);
+            flex-shrink: 0;
+            transition: transform var(--ease);
+        }
+
+        .faq-item.open .faq-question .icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+        }
+
+        .faq-answer-inner {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.8;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer-inner a {
+            color: var(--camel-light);
+            text-decoration: underline;
+        }
+
+        .cta-band {
+            background: var(--olive-dark);
+            padding: 64px 0;
+            text-align: center;
+        }
+
+        .cta-band h2 {
+            font-family: var(--font-head);
+            font-weight: 900;
+            font-style: italic;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .cta-band p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 32px;
+            font-size: 0.97rem;
+        }
+
+        .cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= NAVBAR ======= -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.png" alt="Logo UKM Tenis" class="nav-logo-img" />
+                UKM Tenis<br /><span style="font-size:0.7em;font-style:normal;color:var(--olive);">UGM</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#tentang">Tentang</a></li>
+                <li><a href="index.html#jadwal">Jadwal</a></li>
+                <li><a href="kepengurusan.html">Kepengurusan</a></li>
+                <li><a href="latihan.html" class="active">Bergabung</a></li>
+                <li><a href="index.html#kontak">Kontak</a></li>
+                <li><a href="#daftar" class="nav-join">Daftar</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======= PAGE HERO ======= -->
+    <header class="page-hero">
+        <div class="container">
+            <p class="page-hero-breadcrumb"><a href="index.html">Home</a> <span>/ Cara Bergabung</span></p>
+            <h1 class="page-hero-title">Cara<br /><span class="accent">Bergabung</span></h1>
+        </div>
+    </header>
+
+    <!-- ======= INTRO ======= -->
+    <section style="padding: var(--section-py) 0; background: var(--off-white);">
+        <div class="container">
+            <div class="reveal" style="max-width: 720px;">
+                <p class="section-label">Terbuka Untuk Semua</p>
+                <h2 class="section-title">Ayo Latihan<br />Bersama Kami</h2>
+                <p style="font-size:1rem;color:#555;line-height:1.8;margin-bottom:20px;">
+                    UKM Tenis Lapangan UGM membuka kesempatan bagi mahasiswa Universitas Gadjah Mada dan masyarakat umum
+                    untuk berlatih tenis —
+                    baik yang sudah berpengalaman maupun yang baru ingin belajar.
+                    Latihan dilaksanakan rutin setiap minggu di <strong>Lapangan Tenis UGM Outdoor</strong>.
+                </p>
+                <p style="font-size:1rem;color:#555;line-height:1.8;">
+                    Ada dua jalur masuk: menjadi <strong>Anggota</strong> (berkomitmen bulanan, ikut kegiatan UKM penuh)
+                    atau hadir sebagai <strong>Non-Anggota</strong> (terbuka untuk umum) untuk sesi latihan terbuka
+                    tanpa perlu
+                    mendaftar keanggotaan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= JOIN CARDS ======= -->
+    <section class="join-section" id="daftar">
+        <div class="container">
+            <div class="reveal">
+                <p class="section-label">Pilih Jalur</p>
+                <h2 class="section-title">Anggota &<br />Non-Anggota</h2>
+            </div>
+
+            <div class="join-grid">
+
+                <!-- ANGGOTA -->
+                <div class="join-card reveal reveal-d1">
+                    <h3 class="join-card-title">Anggota</h3>
+                    <p class="join-sched"><i class="fas fa-calendar-day"></i> Setiap Sabtu · 16.00 – 18.00</p>
+                    <div class="join-cost-block">
+                        <p class="join-cost-label">Iuran Latihan</p>
+                        <div>
+                            <span class="join-cost-value">Rp 80.000</span>
+                            <span class="join-cost-unit">/ bulan</span>
+                        </div>
+                    </div>
+                    <p class="join-note">
+                        <i class="fas fa-info-circle" style="color:var(--olive);"></i>
+                        Anggota baru dikenakan iuran <strong>Rp 100.000 di bulan pertama</strong> sebagai biaya
+                        pendaftaran.
+                    </p>
+                    <ul class="join-features" style="margin-bottom:28px;">
+                        <li>Latihan rutin setiap Sabtu sore</li>
+                        <li>Akses seluruh kegiatan dan agenda UKM</li>
+                        <li>Bagian dari komunitas tenis UGM</li>
+                        <li>Bimbingan dari Tim Kepelatihan</li>
+                        <li>Fasilitas lapangan outdoor UGM</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJfctlMspNb3_hmR8_uIIqjIda4qG9jjxpch_GGfawVI8MQ/viewform?usp=publish-editor"
+                        target="_blank" class="btn btn-primary"
+                        style="display:inline-flex;width:100%;justify-content:center;">
+                        <i class="fas fa-user-plus"></i> Daftar Anggota
+                    </a>
+                </div>
+
+                <!-- NON-ANGGOTA -->
+                <div class="join-card alt reveal reveal-d2">
+                    <h3 class="join-card-title">Non-Anggota (Umum)</h3>
+                    <p class="join-sched"><i class="fas fa-calendar-day"></i> Setiap Kamis · 16.00 – 18.00</p>
+                    <div class="join-cost-block" style="background:var(--dark-brown);">
+                        <p class="join-cost-label">Iuran per Sesi</p>
+                        <div>
+                            <span class="join-cost-value">Rp 80.000</span>
+                            <span class="join-cost-unit">/ sesi</span>
+                        </div>
+                    </div>
+                    <p class="join-note">
+                        <i class="fas fa-info-circle" style="color:var(--olive);"></i>
+                        Terbuka untuk mahasiswa UGM dan masyarakat umum yang ingin mencoba atau berlatih tenis secara
+                        tidak rutin tanpa
+                        komitmen keanggotaan.
+                    </p>
+                    <ul class="join-features" style="margin-bottom:28px;">
+                        <li>Sesi terbuka setiap Kamis sore</li>
+                        <li>Tanpa komitmen bulanan</li>
+                        <li>Cocok untuk pemula / coba-coba</li>
+                        <li>Fasilitas lapangan outdoor UGM</li>
+                        <li>Bisa hadir kapan pun tersedia</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCXsC1jYdCXMHKHvmOm03tzySMwxSMd02vEFsPFE6-Dk-_Yg/viewform?usp=publish-editor"
+                        target="_blank" class="btn btn-outline-navy"
+                        style="display:inline-flex;width:100%;justify-content:center;">
+                        <i class="fas fa-clipboard-list"></i> Daftar Non-Anggota
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= JADWAL LENGKAP ======= -->
+    <section class="schedule-section">
+        <div class="container">
+            <div class="reveal">
+                <p class="section-label light">Semua Sesi</p>
+                <h2 class="section-title light">Jadwal Lengkap</h2>
+            </div>
+            <div class="schedule-grid">
+                <div class="sched-card atlet reveal reveal-d1">
+                    <p class="sched-day">Selasa</p>
+                    <p class="sched-time"><i class="fas fa-clock"></i> 16.00 – 18.00</p>
+                    <span class="sched-type">Atlet</span>
+                </div>
+                <div class="sched-card nonanggota reveal reveal-d2">
+                    <p class="sched-day">Kamis</p>
+                    <p class="sched-time"><i class="fas fa-clock"></i> 16.00 – 18.00</p>
+                    <span class="sched-type">Non-Anggota (Umum)</span>
+                </div>
+                <div class="sched-card anggota reveal reveal-d3">
+                    <p class="sched-day">Sabtu</p>
+                    <p class="sched-time"><i class="fas fa-clock"></i> 16.00 – 18.00</p>
+                    <span class="sched-type">Anggota</span>
+                </div>
+                <div class="sched-card atlet reveal reveal-d4">
+                    <p class="sched-day">Minggu</p>
+                    <p class="sched-time"><i class="fas fa-clock"></i> 08.00 – 10.00</p>
+                    <span class="sched-type">Atlet</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= FAQ ======= -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="reveal">
+                <p class="section-label light">Pertanyaan Umum</p>
+                <h2 class="section-title light">FAQ</h2>
+            </div>
+            <div class="faq-list reveal reveal-d1">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Apakah saya perlu bisa bermain tenis untuk bergabung?
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Tidak perlu. UKM Tenis Lapangan UGM terbuka untuk semua tingkatan, dari pemula hingga yang
+                            sudah berpengalaman. Tim kepelatihan kami siap membimbing anggota baru.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Apakah harus mahasiswa UGM?
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Ya, UKM ini merupakan unit kegiatan mahasiswa di bawah Universitas Gadjah Mada sehingga
+                            keanggotaan aktif diperuntukkan bagi mahasiswa UGM. Namun, untuk sesi Non-Anggota,
+                            pendaftaran terbuka untuk masyarakat umum.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Apakah disediakan raket dan bola tenis?
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Peserta dianjurkan membawa perlengkapan tenis sendiri (raket, sepatu, dll). Untuk keperluan
+                            latihan, ada kalanya UKM menyiapkan bola tenis. Hubungi kami via <a
+                                href="https://wa.me/628112819898" target="_blank">WhatsApp</a> untuk info lebih lanjut.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Bagaimana alur pembayaran iurannya?
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Informasi pembayaran akan diberikan setelah Anda mengisi form pendaftaran. Iuran anggota
+                            dibayarkan bulanan kepada bendahara UKM, sementara non-anggota membayar per sesi sebelum
+                            latihan.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Di mana lokasi lapangan latihannya?
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Latihan dilaksanakan di <strong>Lapangan Tenis UGM Outdoor</strong>. Untuk pemesanan
+                            lapangan, hubungi nomor <a href="https://wa.me/628112819898" target="_blank">WhatsApp
+                                0811-2819-898</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= CTA BAND ======= -->
+    <div class="cta-band" id="cta">
+        <div class="container reveal">
+            <h2>Siap Bergabung?</h2>
+            <p>Isi form pendaftaran dan jadilah bagian dari komunitas tenis UGM.</p>
+            <div class="cta-btns">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJfctlMspNb3_hmR8_uIIqjIda4qG9jjxpch_GGfawVI8MQ/viewform?usp=publish-editor"
+                    target="_blank" class="btn btn-camel">
+                    <i class="fas fa-user-plus"></i> Daftar Anggota
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCXsC1jYdCXMHKHvmOm03tzySMwxSMd02vEFsPFE6-Dk-_Yg/viewform?usp=publish-editor"
+                    target="_blank" class="btn btn-outline-white">
+                    <i class="fas fa-clipboard-list"></i> Daftar Non-Anggota
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand-name" style="display:flex; align-items:center; gap:10px;">
+                        <img src="assets/logo.png" alt="Logo" style="height:56px; width:auto;" />
+                        UKM Tenis Lapangan UGM
+                    </div>
+                    <p class="footer-brand-desc">Menjadikan UKM Tenis Lapangan sebagai wadah bagi mahasiswa UGM untuk
+                        mengembangkan kemampuan bermain tenis dengan prinsip kekeluargaan.</p>
+                </div>
+                <div>
+                    <p class="footer-heading">Navigasi</p>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#tentang">Tentang</a></li>
+                        <li><a href="index.html#jadwal">Jadwal Latihan</a></li>
+                        <li><a href="kepengurusan.html">Kepengurusan</a></li>
+                        <li><a href="latihan.html">Cara Bergabung</a></li>
+                        <li><a href="index.html#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-heading">Bergabung</p>
+                    <ul class="footer-links">
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfTJfctlMspNb3_hmR8_uIIqjIda4qG9jjxpch_GGfawVI8MQ/viewform"
+                                target="_blank">Daftar Anggota</a></li>
+                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeCXsC1jYdCXMHKHvmOm03tzySMwxSMd02vEFsPFE6-Dk-_Yg/viewform"
+                                target="_blank">Daftar Non-Anggota</a></li>
+                        <li><a href="https://wa.me/628112819898" target="_blank">Booking Lapangan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 UKM Tenis Lapangan UGM. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/ugmtenislapangan?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@tenislapanganugm?is_from_webapp=1&amp;sender_device=pc" target="_blank" aria-label="TikTok"><i
+                            class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/628112819898" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
+</body>
+
+</html>
